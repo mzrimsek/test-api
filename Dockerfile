@@ -1,5 +1,7 @@
 FROM node:latest
 
+LABEL org.opencontainers.image.source https://github.com/mzrimsek/test-api
+
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
