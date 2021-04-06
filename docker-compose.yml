@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  web:
+    image: ghcr.io/mzrimsek/test-api:latest
+    container_name: test_api
+    ports:
+      - ${HOST_PORT}:3000
+    restart: unless-stopped

@@ -1,0 +1,27 @@
+{
+  "name": "test-api",
+  "version": "1.0.0",
+  "description": "A barebones API to verify data communication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzrimsek/test-api.git"
+  },
+  "keywords": [
+    "docker",
+    "api",
+    "express"
+  ],
+  "author": "Mike Zrimsek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzrimsek/test-api/issues"
+  },
+  "homepage": "https://github.com/mzrimsek/test-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
