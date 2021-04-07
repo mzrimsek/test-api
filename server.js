@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use((req, _res, next) => {
   const now = new Date().toUTCString();
-  const reqMeta = `${now}: ${req.method} - ${req.hostname}`;
+  const reqMeta = `${now}: ${req.method} - ${req.socket.remoteAddress}:${req.socket.remotePort}`;
   console.info(reqMeta);
 
   const queryKeys = Object.keys(req.query);
