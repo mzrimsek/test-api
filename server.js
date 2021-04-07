@@ -3,8 +3,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
-
-const logRequest = req => {
+app.use((req, _res, next) => {
   const now = new Date().toUTCString();
   const reqMeta = `${now}: ${req.method} - ${req.hostname}`;
   console.info(reqMeta);
@@ -18,15 +17,15 @@ const logRequest = req => {
   if (bodyKeys.length > 0) {
     console.info('Body: ', req.body);
   }
-};
 
-app.get('', (req, res) => {
-  logRequest(req);
+  next();
+});
+
+app.get('', (_req, res) => {
   return res.status(200).json('Hello');
 });
 
 app.post('', (req, res) => {
-  logRequest(req);
   return res.status(200).json(req.body);
 });
 
