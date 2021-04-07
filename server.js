@@ -22,7 +22,7 @@ const logRequest = req => {
 
 app.get('', (req, res) => {
   logRequest(req);
-  return res.status(200).send('Hello');
+  return res.status(200).json('Hello');
 });
 
 app.post('', (req, res) => {
