@@ -21,8 +21,8 @@ app.use((req, _res, next) => {
   next();
 });
 
-app.get('', (_req, res) => {
-  return res.status(200).json('Hello');
+app.get('', (req, res) => {
+  return res.status(200).json(req.query);
 });
 
 app.post('', (req, res) => {
